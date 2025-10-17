@@ -1,0 +1,28 @@
+{
+  "name": "playwrightframeworkusingpom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "category": "npx playwright test ./tests/category/CreateNewCategory.spec.js --project=chromium",
+    "course": "npx playwright test ./tests/courses/CreateNewCourse.spec.js --project=chromium",
+    "login": "npx playwright test ./tests/login",
+    "registration": "npx playwright test ./tests/registration",
+    "smoketest": "npx playwright test ./tests/category",
+    "regression": "npx playwright test ./tests/login ./tests/registration",
+    "all": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.5.2",
+    "allure-playwright": "^3.4.1"
+  },
+  "dependencies": {
+    "papaparse": "^5.5.3",
+    "xlsx": "^0.18.5"
+  }
+}
