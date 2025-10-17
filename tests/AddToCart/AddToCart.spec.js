@@ -3,15 +3,23 @@ import {test,expect} from "@playwright/test"
 test("Sample Test For Github Branching",async function ({page}) 
 {
 
-    const loginPage=new LoginPage(page)
+       console.log("Starting Test");
+         
+       const loginPage=new LoginPage(page)
+   
+       await loginPage.gotoURL()
 
-    await loginPage.gotoURL()
+       console.log("Loading URL");
+   
+       await loginPage.fillEmail("admin@email.com")
 
-    await loginPage.fillEmail("admin@email.com")
+       console.log("Entered Username");
+   
+       await loginPage.fillPassword("admin@123")
 
-    await loginPage.fillPassword("admin@123")
-
-    await loginPage.submit()
+       console.log("Entered Password");
+   
+       await loginPage.submit()
     
 })
 
@@ -27,5 +35,6 @@ test("Sample Test For Github Branching2",async function ({page})
 
 test("Sample Test For Github Branching3",async function ({page}) 
 {
+
     
 })
